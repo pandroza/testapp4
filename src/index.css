@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --my-color1: #cecae8;
+  --my-color2: #483d8b;
+  --my-color3: #9991cf;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 10px;
+}
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  //font-family: $main-font, $second-font;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #333;
+  background: white;
+  margin: 0;
+  height:2000px;
+}
+#doodle {
+  position: fixed;
+  z-index: -1;
+  background: #cecae8;
+}
+css-doodle {
+  --rule1: (
+    @grid: 8 / 100vmax; 
+    background: hsla(@r(100), 85%, @r(90%, 100%), @r(0.9)); 
+    @even {
+      background:#483d8b;
+       } 
+    @row (3) {background:#9991cf; } 
+    @size: @r(1vmax, 10vmax);
+      @shape: star 10;
+  animation: test1 infinite @r(100s, 150s) linear; 
+  @keyframes test1 {
+    0% {
+      opacity: 0;
+      transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(360deg));
+    } 
+    2% {
+      opacity: 1;
+    } 
+    50% {
+      transform:
+      translate3d(@r(-500%, 3000%), @r(-500%, 1000%), 0);
+    } 
+    98% {
+      opacity: 1;
+    } 
+    100% {
+      opacity: 0; 
+      transform: translate3d(@r(150px), @r(200px), 0)
+      rotate(@r(0deg));
+    }
+  }
+  );
 }
