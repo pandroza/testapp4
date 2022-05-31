@@ -10,7 +10,7 @@ html {
 }
 body {
   /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
-  //font-family: "Teko", sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
